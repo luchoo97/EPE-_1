@@ -49,7 +49,7 @@ public class CategoriaDao {
         
            // st = con.prepareStatement(SQL);
            ResultSet resultado=st.executeQuery();
-        ArrayList<Categoria> lista=null;
+        ArrayList<Categoria> lista=new ArrayList<>();
         Categoria cat;
         while(resultado.next()){
             cat=new Categoria();

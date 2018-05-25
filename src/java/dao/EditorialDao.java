@@ -53,7 +53,7 @@ public class EditorialDao {
         
            // st = con.prepareStatement(SQL);
            ResultSet resultado=st.executeQuery();
-        ArrayList<Editorial> lista=null;
+        ArrayList<Editorial> lista=new ArrayList<>();
         Editorial edi;
         while(resultado.next()){
             edi=new Editorial();
