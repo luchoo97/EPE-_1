@@ -555,181 +555,187 @@
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <div class="table-header">
-                                            Registro de Categorias
+                                            Registro de Libros
                                         </div>
 
                                         <!-- div.table-responsive -->
 
                                         <!-- div.dataTables_borderWrap -->
                                         <div>
-                                            <form action="EditorialControl" method="post" class="form-horizontal">
+                                            <form action="LibroControl" method="post" class="form-horizontal">
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         ISBN:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                         <input type="text" name="isbn" value="" placeholder="Codigo de la categoria" />
+                                                        <input type="text" name="isbn" value="" placeholder="Codigo de la categoria" />
                                                     </div>
                                                 </div>
-                                                
-                                                 <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                        Titulo:
-                                                    </label>
-                                                    <div class="col-sm-9" >
-                                                         <input type="text" name="titulo" value="" placeholder="Nombre de la categoria" />
+
+                                                <form action="LibroControl" method="post" class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label no-padding-right">
+                                                            Titulo:
+                                                        </label>
+                                                        <div class="col-sm-9" >
+                                                            <input type="text" name="titulo" value="" placeholder="Nombre de la categoria" />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                      
-                                                           
-                                                                 
-                                                                        <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                        Autor:
-                                                    </label>
-                                                    <div class="col-sm-9" >
-                                                         <input type="text" name="nombreautor" value="" placeholder="Autor de la categoria" />
-                                                    </div>
-                                                </div>
-                                                <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                        Publicacion:
-                                                    </label>
-                                                    <div class="col-sm-9" >
-                                                         <input type="text" name="publicacion" value="" placeholder="Autor de la categoria" />
-                                                    </div>
-                                                </div>
-                                                    <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                        
-                                                        <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                         Categoria:
-                                                    </label>
-                                                    <select name="categoria">
-                                                        <option value="0">Seleccione una categoria</option>
-                                                        
-                                                            <%for(Categoria c:CategoriaDao.listar()) { %>
-                                                            <option value="<%=c.getCodigo() %>">"<%=c.getNombre()%>"</option>
-                                                        <%} %>
-                                                    </select>
-                                                </div>
-                                                        </form>
+
+
+
+                                                    <form action="LibroControl" method="post" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right">
+                                                                Autor:
+                                                            </label>
+                                                            <div class="col-sm-9" >
+                                                                <input type="text" name="nombreautor" value="" placeholder="Autor de la categoria" />
+                                                            </div>
+                                                        </div>
+                                                        <form action="LibroControl" method="post" class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right">
+                                                                    Publicacion:
+                                                                </label>
+                                                                <div class="col-sm-9" >
+                                                                    <input type="text" name="publicacion" value="" placeholder="Autor de la categoria" />
+                                                                </div>
+                                                            </div>
                                                             
-                                                            <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                        Nit Editorial:
-                                                    </label>
-                                                    <div class="col-sm-9" >
-                                                         <select name="editorial">
-                                                        <option value="0">Seleccione una editorial</option>
-                                                        <%for(Editorial c:EditorialDao.listar()) { %>
-                                                        <option value="<%=c.getNit()%>">"<%=c.getNombre()%>"</option>
-                                                        <%} %>
-                                                    </select>
-                                                    </div>
-                                                </div>
-                                                          
-                                                          <button name="accion" class="btn btn-success" type="submit">
-                                                              <i class="fa fa-save"></i>
-                                                              Registrar
-                                                          </button>
-                                                                 <button name="accion" class="btn btn-warning" type="submit">
-                                                              <i class="fa fa-edit"></i>
-                                                              Actualizar
-                                                          </button>
-                                                                 <button name="accion" class="btn btn-danger" type="submit">
-                                                              <i class="fa fa-clock-o"></i>
-                                                              Eliminar
-                                                          </button>
-                                                          <div>
-                                                              <%=(request.getAttribute("mensaje")!= null?request.getAttribute("mensaje"):"")%>
-                                                          </div>
-                                                           
-                                            </form>
-                                        </div>
-                                        
+
+                                                                        <form action="LibroControl" method="post" class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-3 control-label no-padding-right">
+                                                                                    Categoria:
+                                                                                </label>
+                                                                                <select name="categoria">
+                                                                                    <option value="0">Seleccione una categoria</option>
+
+                                                                                    <%for (Categoria c : CategoriaDao.listar()) {%>
+                                                                                    <option value="<%=c.getCodigo()%>">"<%=c.getNombre()%>"</option>
+                                                                                    <%} %>
+                                                                                </select>
+                                                                            </div>
+                                                                                
+                                                                                
+
+                                                                        <form action="LibroControl" method="post" class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <label class="col-sm-3 control-label no-padding-right">
+                                                                                    Nit Editorial:
+                                                                                </label>
+                                                                                <div class="col-sm-9" >
+                                                                                    <select name="editorial">
+                                                                                        <option value="0">Seleccione una editorial</option>
+                                                                                        <%for (Editorial c : EditorialDao.listar()) {%>
+                                                                                        <option value="<%=c.getNit()%>">"<%=c.getNombre()%>"</option>
+                                                                                        <%}%>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                                    <div class="form-group">
+                                                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                                                    Descripción:
+                                                                                </label>
+                                                                                    <div class="col-sm-9" ><textarea name="descripcion" rows="4" cols="20"></textarea>
+                                                                                    </div>
+                                                                                    </div>
+
+                                                                            <button name="accion" class="btn btn-success" type="submit" values="registrar">
+                                                                                <i class="fa fa-save"></i>
+                                                                                Registrar
+                                                                            </button>
+                                                                                    <button name="accion" class="btn btn-warning" type="submit" value="actualizar">
+                                                                                <i class="fa fa-edit"></i>
+                                                                                Actualizar
+                                                                            </button>
+                                                                                    <button name="accion" class="btn btn-danger" type="submit" value="eliminar">
+                                                                                <i class="fa fa-clock-o"></i>
+                                                                                Eliminar
+                                                                            </button>
+                                                                            <div>
+                                                                                <%=(request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "")%>
+                                                                            </div>
+
+                                                                        </form>
+                                                                </div>
 
 
-                                    </div><!-- /.modal-content -->
-                                </div><!-- /.modal-dialog -->
-                            </div>
 
-                            <!-- PAGE CONTENT ENDS -->
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.page-content -->
-            </div>
-        </div><!-- /.main-content -->
+                                                                </div><!-- /.modal-content -->
+                                                                </div><!-- /.modal-dialog -->
+                                                                </div>
 
-        <div class="footer">
-            <div class="footer-inner">
-                <div class="footer-content">
-                    <span class="bigger-120">
-                        Christian Gámez &copy; 2017-2018
-                    </span>
+                                                                <!-- PAGE CONTENT ENDS -->
+                                                                </div><!-- /.col -->
+                                                                </div><!-- /.row -->
+                                                                </div><!-- /.page-content -->
+                                                                </div>
+                                                                </div><!-- /.main-content -->
 
-                    &nbsp; &nbsp;
-                    <span class="action-buttons">
-                        <a href="#">
-                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                        </a>
+                                                                <div class="footer">
+                                                                    <div class="footer-inner">
+                                                                        <div class="footer-content">
+                                                                            <span class="bigger-120">
+                                                                                Christian Gámez &copy; 2017-2018
+                                                                            </span>
 
-                        <a href="#">
-                            <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-                        </a>
+                                                                            &nbsp; &nbsp;
+                                                                            <span class="action-buttons">
+                                                                                <a href="#">
+                                                                                    <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                                                                                </a>
 
-                        <a href="#">
-                            <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-                        </a>
-                    </span>
-                </div>
-            </div>
-        </div>
+                                                                                <a href="#">
+                                                                                    <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                                                                                </a>
 
-        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-        </a>
+                                                                                <a href="#">
+                                                                                    <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                                                                                </a>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                                                                    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+                                                                </a>
 
 
-        <!-- basic scripts -->
+                                                                <!-- basic scripts -->
 
-        <!--[if !IE]> -->
-        <script src="assets/js/jquery-2.1.4.min.js"></script>
+                                                                <!--[if !IE]> -->
+                                                                <script src="assets/js/jquery-2.1.4.min.js"></script>
 
-        <!-- <![endif]-->
+                                                                <!-- <![endif]-->
 
-        <!--[if IE]>
-<script src="assets/js/jquery-1.11.3.min.js"></script>
-<![endif]-->
-        <script type="text/javascript">
+                                                                <!--[if IE]>
+                                                        <script src="assets/js/jquery-1.11.3.min.js"></script>
+                                                        <![endif]-->
+                                                                <script type="text/javascript">
                     if ('ontouchstart' in document.documentElement)
                         document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
-        </script>
-        <script src="assets/js/bootstrap.min.js"></script>
+                                                                </script>
+                                                                <script src="assets/js/bootstrap.min.js"></script>
 
-        <!-- page specific plugin scripts -->
-        <script src="assets/js/jquery.dataTables.min.js"></script>
-        <script src="assets/js/jquery.dataTables.bootstrap.min.js"></script>
-        <script src="assets/js/dataTables.buttons.min.js"></script>
-        <script src="assets/js/buttons.flash.min.js"></script>
-        <script src="assets/js/buttons.html5.min.js"></script>
-        <script src="assets/js/buttons.print.min.js"></script>
-        <script src="assets/js/buttons.colVis.min.js"></script>
-        <script src="assets/js/dataTables.select.min.js"></script>
+                                                                <!-- page specific plugin scripts -->
+                                                                <script src="assets/js/jquery.dataTables.min.js"></script>
+                                                                <script src="assets/js/jquery.dataTables.bootstrap.min.js"></script>
+                                                                <script src="assets/js/dataTables.buttons.min.js"></script>
+                                                                <script src="assets/js/buttons.flash.min.js"></script>
+                                                                <script src="assets/js/buttons.html5.min.js"></script>
+                                                                <script src="assets/js/buttons.print.min.js"></script>
+                                                                <script src="assets/js/buttons.colVis.min.js"></script>
+                                                                <script src="assets/js/dataTables.select.min.js"></script>
 
-        <!-- ace scripts -->
-        <script src="assets/js/ace-elements.min.js"></script>
-        <script src="assets/js/ace.min.js"></script>
+                                                                <!-- ace scripts -->
+                                                                <script src="assets/js/ace-elements.min.js"></script>
+                                                                <script src="assets/js/ace.min.js"></script>
 
-        <!-- inline scripts related to this page -->
-        <script type="text/javascript">
+                                                                <!-- inline scripts related to this page -->
+                                                                <script type="text/javascript">
                     jQuery(function ($) {
                         //initiate dataTables plugin
                         var myTable =
@@ -973,8 +979,8 @@
 
 
                     })
-        </script>
-    </body>
-</html>
+                                                                </script>
+                                                                </body>
+                                                                </html>
 
 

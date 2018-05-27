@@ -4,6 +4,11 @@
     Author     : Christian Gámez
 --%>
 
+<%@page import="dao.CategoriaDao"%>
+<%@page import="modelo.Editorial"%>
+<%@page import="dao.EditorialDao"%>
+<%@page import="dao.Librodao"%>
+<%@page import="modelo.Libro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -409,7 +414,7 @@
 							</li>
 
 							<li class="">
-								<a href="registrarLibro">
+								<a href="regristroLibro.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Registrar Libro
 								</a>
@@ -417,7 +422,7 @@
 								<b class="arrow"></b>
 							</li>
                                                         <li class="">
-								<a href="regristroEditorial.jsp">
+								<a href="registrarEditorial.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Registrar Editorial
 								</a>
@@ -579,18 +584,20 @@
 												</thead>
 
 												<tbody>
+                                                                                        
+                                                                                        <%for (Libro l : Librodao.listar()) {%>
 													<tr>
 
 														<td>
-														<a href="#">1254-3256-9856-652</a>
+														<a href="#"><%=l. getIsbn()%></a>
 														</td>
-														<td class="hidden-480">Introducción a desarrollo web con JSP</td>
-														<td>Christian Gámez</td>
+														<td class="hidden-480"><%=l. getTitulo()%></td>
+														<td><%=l. getNombre_autor()%></td>
 
-														<td>2017-12-31</td>
-                                                                                                                <td><span class="label label-sm label-success">Planeta</span></td>
+														<td><%=l. getPublicacion()%></td>
+                                                                                                                <td><span class="label label-sm label-success"><%=EditorialDao. getEditorial(l.getNit_editorial()) %></span></td>
                                                                                                                 <td>
-															<span class="label label-sm label-success">Matemáticas</span>
+															<span class="label label-sm label-success"><%=CategoriaDao. getCategoria(l. getCodigo_categoria()) %></span>
 														</td>
 
 														<td>
@@ -644,7 +651,7 @@
 														</td>
 													</tr>
 
-													
+												<%} %>	
 													</tbody>
 												</table>
 											</div>
