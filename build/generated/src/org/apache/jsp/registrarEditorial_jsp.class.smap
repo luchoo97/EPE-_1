@@ -1,0 +1,16 @@
+SMAP
+registrarEditorial_jsp.java
+JSP
+*S JSP
+*F
++ 0 registrarEditorial.jsp
+registrarEditorial.jsp
++ 1 css.jsp
+css.jsp
+*L
+5,9:49
+1#1,34:58
+13#0,609:91
+622:700,3
+623,329:703
+*E
