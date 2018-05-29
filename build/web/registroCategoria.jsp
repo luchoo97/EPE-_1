@@ -568,7 +568,7 @@
                                                     </div>
                                                 </div>
                                                 
-                                                 <form action="CategoriaControl" method="post" class="form-horizontal">
+                                                 
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Nombre:
@@ -577,11 +577,12 @@
                                                          <input type="text" name="nombre" value="" placeholder="Nombre de la categoria" />
                                                     </div>
                                                 </div>
-                                                      <form action="CategoriaControl" method="post" class="form-horizontal">
+                                                     
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Autor:
                                                     </label>
+                                                    
                                                     <div class="col-sm-9" >
                                                          <input type="text" name="autor" value="" placeholder="Autor de la categoria" />
                                                     </div>

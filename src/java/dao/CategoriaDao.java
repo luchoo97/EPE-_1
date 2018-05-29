@@ -22,13 +22,13 @@ import modelo.Categoria;
 public class CategoriaDao {
     public static boolean regisrar(Categoria cat){
        try { 
-           String SQL="INSERT INTO categorias (nombre, autor)"+ "values (?,?);";
+           String SQL="INSERT INTO categorias (nombre, autor) values (?,?);";
         Connection con=Conexion.conectar();
         PreparedStatement st=con.prepareStatement(SQL);
         st.setString(1, cat.getNombre());
         st.setString(2, cat.getAutor());
        
-            st = con.prepareStatement(SQL);
+            
         if (st.executeUpdate()>0){
             return true;
         }else{
