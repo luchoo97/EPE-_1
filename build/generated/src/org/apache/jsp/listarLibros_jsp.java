@@ -3,6 +3,11 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import dao.CategoriaDao;
+import modelo.Editorial;
+import dao.EditorialDao;
+import dao.Librodao;
+import modelo.Libro;
 
 public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -46,6 +51,11 @@ public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBas
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -487,7 +497,7 @@ public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\t\t\t\t\t\t\t</li>\n");
       out.write("\n");
       out.write("\t\t\t\t\t\t\t<li class=\"\">\n");
-      out.write("\t\t\t\t\t\t\t\t<a href=\"#\">\n");
+      out.write("\t\t\t\t\t\t\t\t<a href=\"regristroLibro.jsp\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<i class=\"menu-icon fa fa-caret-right\"></i>\n");
       out.write("\t\t\t\t\t\t\t\t\tRegistrar Libro\n");
       out.write("\t\t\t\t\t\t\t\t</a>\n");
@@ -495,7 +505,7 @@ public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\t\t\t\t\t\t\t\t<b class=\"arrow\"></b>\n");
       out.write("\t\t\t\t\t\t\t</li>\n");
       out.write("                                                        <li class=\"\">\n");
-      out.write("\t\t\t\t\t\t\t\t<a href=\"#\">\n");
+      out.write("\t\t\t\t\t\t\t\t<a href=\"registrarEditorial.jsp\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<i class=\"menu-icon fa fa-caret-right\"></i>\n");
       out.write("\t\t\t\t\t\t\t\t\tRegistrar Editorial\n");
       out.write("\t\t\t\t\t\t\t\t</a>\n");
@@ -503,7 +513,7 @@ public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\t\t\t\t\t\t\t\t<b class=\"arrow\"></b>\n");
       out.write("\t\t\t\t\t\t\t</li>\n");
       out.write("                                                        <li class=\"\">\n");
-      out.write("\t\t\t\t\t\t\t\t<a href=\"#\">\n");
+      out.write("\t\t\t\t\t\t\t\t<a href=\"registroCategoria.jsp\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<i class=\"menu-icon fa fa-caret-right\"></i>\n");
       out.write("\t\t\t\t\t\t\t\t\tRegistrar Categoría\n");
       out.write("\t\t\t\t\t\t\t\t</a>\n");
@@ -657,18 +667,34 @@ public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t</thead>\n");
       out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t<tbody>\n");
+      out.write("                                                                                        \n");
+      out.write("                                                                                        ");
+for (Libro l : Librodao.listar()) {
+      out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n");
       out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">1254-3256-9856-652</a>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">");
+      out.print(l. getIsbn());
+      out.write("</a>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"hidden-480\">Introducción a desarrollo web con JSP</td>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>Christian Gámez</td>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td class=\"hidden-480\">");
+      out.print(l. getTitulo());
+      out.write("</td>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>");
+      out.print(l. getNombre_autor());
+      out.write("</td>\n");
       out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>2017-12-31</td>\n");
-      out.write("                                                                                                                <td><span class=\"label label-sm label-success\">Planeta</span></td>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>");
+      out.print(l. getPublicacion());
+      out.write("</td>\n");
+      out.write("                                                                                                                <td><span class=\"label label-sm label-success\">");
+      out.print(EditorialDao. getEditorial(l.getNit_editorial()) );
+      out.write("</span></td>\n");
       out.write("                                                                                                                <td>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"label label-sm label-success\">Matemáticas</span>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"label label-sm label-success\">");
+      out.print(CategoriaDao. getCategoria(l. getCodigo_categoria()) );
+      out.write("</span>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n");
       out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n");
@@ -722,7 +748,9 @@ public final class listarLibros_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n");
       out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\t");
+} 
+      out.write("\t\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\t</table>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t</div>\n");
