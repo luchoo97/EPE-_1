@@ -20,10 +20,16 @@
         if(s_usuario.equals("ipchile") && s_clave.equals("1234"))    
         {
             response.sendRedirect("index.jsp");
+            
+            
         }
         else{
             response.sendRedirect("login.jsp");
         }
         %>
     </body>
+    <script>
+                    var msg="Bienvenido Usuario";
+                    alert(msg);
+                    </script>
 </html>
