@@ -19,17 +19,19 @@
             s_clave=request.getParameter("f_clave");
         if(s_usuario.equals("ipchile") && s_clave.equals("1234"))    
         {
-            response.sendRedirect("index.jsp");
+            out.println("<script> alert('BIENVENIDO ADMINISTRADOR');"
+                    + "location.href='index.jsp';"
+                    + "  </script>");
+            
             
             
         }
         else{
-            response.sendRedirect("login.jsp");
+              out.println("<script> alert('ERROR EN LOS DATOS');"
+                    + "location.href='login.jsp';"
+                    + "  </script>");
         }
         %>
     </body>
-    <script>
-                    var msg="Bienvenido Usuario";
-                    alert(msg);
-                    </script>
+
 </html>
