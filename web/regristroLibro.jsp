@@ -568,179 +568,179 @@
                                                         ISBN:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                        <input type="text" name="isbn" value="" placeholder="Codigo de la categoria" />
+                                                        <input type="text" name="isbn" value="" placeholder="ISBN" />
                                                     </div>
                                                 </div>
 
-                                                <form action="LibroControl" method="post" class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-3 control-label no-padding-right">
-                                                            Titulo:
-                                                        </label>
-                                                        <div class="col-sm-9" >
-                                                            <input type="text" name="titulo" value="" placeholder="Nombre de la categoria" />
-                                                        </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                        Titulo:
+                                                    </label>
+                                                    <div class="col-sm-9" >
+                                                        <input type="text" name="titulo" value="" placeholder="Titulo del Libro" />
                                                     </div>
+                                                </div>
 
 
 
-                                                    <form action="LibroControl" method="post" class="form-horizontal">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-3 control-label no-padding-right">
-                                                                Autor:
-                                                            </label>
-                                                            <div class="col-sm-9" >
-                                                                <input type="text" name="nombreautor" value="" placeholder="Autor de la categoria" />
-                                                            </div>
-                                                        </div>
-                                                        <form action="LibroControl" method="post" class="form-horizontal">
-                                                            <div class="form-group">
-                                                                <label class="col-sm-3 control-label no-padding-right">
-                                                                    Publicacion:
-                                                                </label>
-                                                                <div class="col-sm-9" >
-                                                                    <input type="text" name="publicacion" value="" placeholder="Autor de la categoria" />
-                                                                </div>
-                                                            </div>
-                                                            
 
-                                                                        <form action="LibroControl" method="post" class="form-horizontal">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3 control-label no-padding-right">
-                                                                                    Categoria:
-                                                                                </label>
-                                                                                <select name="categoria">
-                                                                                    <option value="0">Seleccione una categoria</option>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                        Autor:
+                                                    </label>
+                                                    <div class="col-sm-9" >
+                                                        <input type="text" name="autor" value="" placeholder="Autor" />
+                                                    </div>
+                                                </div>
 
-                                                                                    <%for (Categoria c : CategoriaDao.listar()) {%>
-                                                                                    <option value="<%=c.getCodigo()%>">"<%=c.getNombre()%>"</option>
-                                                                                    <%} %>
-                                                                                </select>
-                                                                            </div>
-                                                                                
-                                                                                
-
-                                                                        <form action="LibroControl" method="post" class="form-horizontal">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3 control-label no-padding-right">
-                                                                                    Nit Editorial:
-                                                                                </label>
-                                                                                <div class="col-sm-9" >
-                                                                                    <select name="editorial">
-                                                                                        <option value="0">Seleccione una editorial</option>
-                                                                                        <%for (Editorial c : EditorialDao.listar()) {%>
-                                                                                        <option value="<%=c.getNit()%>">"<%=c.getNombre()%>"</option>
-                                                                                        <%}%>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                                    <div class="form-group">
-                                                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                                                    Descripción:
-                                                                                </label>
-                                                                                    <div class="col-sm-9" ><textarea name="descripcion" rows="4" cols="20"></textarea>
-                                                                                    </div>
-                                                                                    </div>
-
-                                                                            <button name="accion" class="btn btn-success" type="submit" values="registrar">
-                                                                                <i class="fa fa-save"></i>
-                                                                                Registrar
-                                                                            </button>
-                                                                                    <button name="accion" class="btn btn-warning" type="submit" value="actualizar">
-                                                                                <i class="fa fa-edit"></i>
-                                                                                Actualizar
-                                                                            </button>
-                                                                                    <button name="accion" class="btn btn-danger" type="submit" value="eliminar">
-                                                                                <i class="fa fa-clock-o"></i>
-                                                                                Eliminar
-                                                                            </button>
-                                                                            <div>
-                                                                                <%=(request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "")%>
-                                                                            </div>
-
-                                                                        </form>
-                                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                       Fecha de Publicacion:
+                                                    </label>
+                                                    <div class="col-sm-9" >
+                                                        <input type="text" name="publicacion" value="" placeholder="2018-30-05" />
+                                                    </div>
+                                                </div>
 
 
 
-                                                                </div><!-- /.modal-content -->
-                                                                </div><!-- /.modal-dialog -->
-                                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                        Categoria:
+                                                    </label>
+                                                    <select name="categoria">
+                                                        <option value="0">Seleccione una categoria</option>
 
-                                                                <!-- PAGE CONTENT ENDS -->
-                                                                </div><!-- /.col -->
-                                                                </div><!-- /.row -->
-                                                                </div><!-- /.page-content -->
-                                                                </div>
-                                                                </div><!-- /.main-content -->
-
-                                                                <div class="footer">
-                                                                    <div class="footer-inner">
-                                                                        <div class="footer-content">
-                                                                            <span class="bigger-120">
-                                                                                Christian Gámez &copy; 2017-2018
-                                                                            </span>
-
-                                                                            &nbsp; &nbsp;
-                                                                            <span class="action-buttons">
-                                                                                <a href="#">
-                                                                                    <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                                </a>
-
-                                                                                <a href="#">
-                                                                                    <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-                                                                                </a>
-
-                                                                                <a href="#">
-                                                                                    <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-                                                                                </a>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-                                                                    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-                                                                </a>
+                                                        <%for (Categoria c : CategoriaDao.listar()) {%>
+                                                        <option value="<%=c.getCodigo()%>">"<%=c.getNombre()%>"</option>
+                                                        <%} %>
+                                                    </select>
+                                                </div>
 
 
-                                                                <!-- basic scripts -->
 
-                                                                <!--[if !IE]> -->
-                                                                <script src="assets/js/jquery-2.1.4.min.js"></script>
 
-                                                                <!-- <![endif]-->
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                        Nit Editorial:
+                                                    </label>
+                                                    <div class="col-sm-9" >
+                                                        <select name="editorial">
+                                                            <option value="0">Seleccione una editorial</option>
+                                                            <%for (Editorial c : EditorialDao.listar()) {%>
+                                                            <option value="<%=c.getNit()%>">"<%=c.getNombre()%>"</option>
+                                                            <%}%>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                        Descripción:
+                                                    </label>
+                                                    <div class="col-sm-9" ><textarea name="descripcion" rows="4" cols="20"></textarea>
+                                                    </div>
+                                                </div>
 
-                                                                <!--[if IE]>
-                                                        <script src="assets/js/jquery-1.11.3.min.js"></script>
-                                                        <![endif]-->
-                                                                <script type="text/javascript">
+                                                <button name="accion" class="btn btn-success" type="submit" >
+                                                    <i class="fa fa-save"></i>
+                                                    Registrar
+                                                </button>
+                                                <button name="accion" class="btn btn-warning" type="submit" >
+                                                    <i class="fa fa-edit"></i>
+                                                    Actualizar
+                                                </button>
+                                                <button name="accion" class="btn btn-danger" type="submit" >
+                                                    <i class="fa fa-clock-o"></i>
+                                                    Eliminar
+                                                </button>
+                                                <div>
+                                                    <%=(request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "")%>
+                                                </div>
+
+                                            </form>
+                                        </div>
+
+
+
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div>
+
+                            <!-- PAGE CONTENT ENDS -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.page-content -->
+            </div>
+        </div><!-- /.main-content -->
+
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <span class="bigger-120">
+                        Héctor Navaro & Luis Sánchez &copy; 2017-2018
+                    </span>
+
+                    &nbsp; &nbsp;
+                    <span class="action-buttons">
+                        <a href="#">
+                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+
+
+        <!-- basic scripts -->
+
+        <!--[if !IE]> -->
+        <script src="assets/js/jquery-2.1.4.min.js"></script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+        <script type="text/javascript">
                     if ('ontouchstart' in document.documentElement)
                         document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
-                                                                </script>
-                                                                <script src="assets/js/bootstrap.min.js"></script>
+        </script>
+        <script src="assets/js/bootstrap.min.js"></script>
 
-                                                                <!-- page specific plugin scripts -->
-                                                                <script src="assets/js/jquery.dataTables.min.js"></script>
-                                                                <script src="assets/js/jquery.dataTables.bootstrap.min.js"></script>
-                                                                <script src="assets/js/dataTables.buttons.min.js"></script>
-                                                                <script src="assets/js/buttons.flash.min.js"></script>
-                                                                <script src="assets/js/buttons.html5.min.js"></script>
-                                                                <script src="assets/js/buttons.print.min.js"></script>
-                                                                <script src="assets/js/buttons.colVis.min.js"></script>
-                                                                <script src="assets/js/dataTables.select.min.js"></script>
+        <!-- page specific plugin scripts -->
+        <script src="assets/js/jquery.dataTables.min.js"></script>
+        <script src="assets/js/jquery.dataTables.bootstrap.min.js"></script>
+        <script src="assets/js/dataTables.buttons.min.js"></script>
+        <script src="assets/js/buttons.flash.min.js"></script>
+        <script src="assets/js/buttons.html5.min.js"></script>
+        <script src="assets/js/buttons.print.min.js"></script>
+        <script src="assets/js/buttons.colVis.min.js"></script>
+        <script src="assets/js/dataTables.select.min.js"></script>
 
-                                                                <!-- ace scripts -->
-                                                                <script src="assets/js/ace-elements.min.js"></script>
-                                                                <script src="assets/js/ace.min.js"></script>
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
 
-                                                                <!-- inline scripts related to this page -->
-                                                                <script type="text/javascript">
+        <!-- inline scripts related to this page -->
+        <script type="text/javascript">
                     jQuery(function ($) {
-                        //initiate dataTables plugin
+//initiate dataTables plugin
                         var myTable =
                                 $('#dynamic-table')
-                                //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+//.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
                                 .DataTable({
                                     bAutoWidth: false,
                                     "aoColumns": [
@@ -750,21 +750,21 @@
                                     ],
                                     "aaSorting": [],
 
-                                    //"bProcessing": true,
-                                    //"bServerSide": true,
-                                    //"sAjaxSource": "http://127.0.0.1/table.php"	,
+//"bProcessing": true,
+//"bServerSide": true,
+//"sAjaxSource": "http://127.0.0.1/table.php"	,
 
-                                    //,
-                                    //"sScrollY": "200px",
-                                    //"bPaginate": false,
+//,
+//"sScrollY": "200px",
+//"bPaginate": false,
 
-                                    //"sScrollX": "100%",
-                                    //"sScrollXInner": "120%",
-                                    //"bScrollCollapse": true,
-                                    //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
-                                    //you may want to wrap the table inside a "div.dataTables_borderWrap" element
+//"sScrollX": "100%",
+//"sScrollXInner": "120%",
+//"bScrollCollapse": true,
+//Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
+//you may want to wrap the table inside a "div.dataTables_borderWrap" element
 
-                                    //"iDisplayLength": 50
+//"iDisplayLength": 50
 
 
                                     select: {
@@ -815,7 +815,7 @@
                         });
                         myTable.buttons().container().appendTo($('.tableTools-container'));
 
-                        //style the message box
+//style the message box
                         var defaultCopyAction = myTable.button(1).action();
                         myTable.button(1).action(function (e, dt, button, config) {
                             defaultCopyAction(e, dt, button, config);
@@ -837,7 +837,7 @@
                             $('.dt-button-collection').appendTo('.tableTools-container .dt-buttons')
                         });
 
-                        ////
+////
 
                         setTimeout(function () {
                             $($('.tableTools-container')).find('a.dt-button').each(function () {
@@ -867,11 +867,11 @@
 
 
 
-                        /////////////////////////////////
-                        //table checkboxes
+/////////////////////////////////
+//table checkboxes
                         $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
 
-                        //select/deselect all rows according to table header checkbox
+//select/deselect all rows according to table header checkbox
                         $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function () {
                             var th_checked = this.checked;//checkbox inside "TH" table header
 
@@ -884,7 +884,7 @@
                             });
                         });
 
-                        //select/deselect a row when the checkbox is checked/unchecked
+//select/deselect a row when the checkbox is checked/unchecked
                         $('#dynamic-table').on('click', 'td input[type=checkbox]', function () {
                             var row = $(this).closest('tr').get(0);
                             if (this.checked)
@@ -903,8 +903,8 @@
 
 
 
-                        //And for the first simple table, which doesn't have TableTools or dataTables
-                        //select/deselect all rows according to table header checkbox
+//And for the first simple table, which doesn't have TableTools or dataTables
+//select/deselect all rows according to table header checkbox
                         var active_class = 'active';
                         $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function () {
                             var th_checked = this.checked;//checkbox inside "TH" table header
@@ -918,7 +918,7 @@
                             });
                         });
 
-                        //select/deselect a row when the checkbox is checked/unchecked
+//select/deselect a row when the checkbox is checked/unchecked
                         $('#simple-table').on('click', 'td input[type=checkbox]', function () {
                             var $row = $(this).closest('tr');
                             if ($row.is('.detail-row '))
@@ -932,10 +932,10 @@
 
 
                         /********************************/
-                        //add tooltip for small view action buttons in dropdown menu
+//add tooltip for small view action buttons in dropdown menu
                         $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
 
-                        //tooltip placement on right or left
+//tooltip placement on right or left
                         function tooltip_placement(context, source) {
                             var $source = $(source);
                             var $parent = $source.closest('table')
@@ -943,7 +943,7 @@
                             var w1 = $parent.width();
 
                             var off2 = $source.offset();
-                            //var w2 = $source.width();
+//var w2 = $source.width();
 
                             if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2))
                                 return 'right';
@@ -979,8 +979,8 @@
 
 
                     })
-                                                                </script>
-                                                                </body>
-                                                                </html>
+        </script>
+    </body>
+</html>
 
 

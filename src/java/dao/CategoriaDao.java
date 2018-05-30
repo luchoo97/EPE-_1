@@ -39,6 +39,24 @@ public class CategoriaDao {
         }
        
     }
+    
+     public static boolean eliminar(Categoria cat) {
+        try {
+            String SQL = "delate from categorias where codigo=?";
+
+            Connection con = Conexion.conectar();
+            PreparedStatement st = con.prepareStatement(SQL);
+            st.setInt(1, cat. getCodigo());
+
+            if (st.executeUpdate() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
      public static ArrayList<Categoria> listar(){
         try{
          String SQL="select * from categorias;";

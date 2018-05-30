@@ -74,7 +74,7 @@ public class LibroControl extends HttpServlet {
             throws ServletException, IOException {
         String isbn = request.getParameter("isbn");
         String titulo = request.getParameter("titulo");
-        String nombreautor = request.getParameter("nombreautor");
+        String autor = request.getParameter("autor");
         String publicacion = request.getParameter("publicacion");
         int categoria = Integer.parseInt(request.getParameter("categoria"));
         String editorial = request.getParameter("editorial");
@@ -85,7 +85,7 @@ public class LibroControl extends HttpServlet {
 
         l.setIsbn(isbn);
         l.setTitulo(titulo);
-        l.setNombre_autor(nombreautor);
+        l.setNombre_autor(autor);
         l.setPublicacion(publicacion);
         l.setCodigo_categoria(categoria);
         l.setNit_editorial(editorial);
