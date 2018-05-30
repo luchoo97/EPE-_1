@@ -31,3 +31,5 @@
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+
+                    <link rel="icon" type="image/ico" href="./images/icon.ico" />

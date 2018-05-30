@@ -8,8 +8,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+       
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>ACCESO A USUARIO</title>
+        
         <%@include file="css.jsp" %>
     </head>
     <body>
@@ -27,37 +29,45 @@
                 </button>
                 
                 <div class="navbar-header pull-left">
-                    <a href="index.jsp" class="navbar-brand">
+                    <a href="" class="navbar-brand">
                         <small>
                             <i class="fa fa-book"></i>
                             Biblioteca H&L
                         </small>
                     </a>
                 </div>
+            </div>
+        </div>
+           
+                 
 
                 <div>
-        <form action="validar.jsp" method="POST">
-            <table border="1" aling="center">
-                
-                <tbody>
-                    <tr>
-                        <td>Uusuario:</td>
-                        <td><input type="text" name="f_nombre" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Contraseña:</td>
-                        <td><input type="password" name="f_clave" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Enviar" /></td>
-                
-                        
-                    </tr>
-                </tbody>
-            </table>
-            
-
-        </form>
+                    <div class="container">
+    <div class="row vertical-offset-100">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Inicio de Sesión</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form" action="validar.jsp" method="POST">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="Usuario" name="f_nombre" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Contraseña" name="f_clave" type="password" value="">
+			    		</div>
+			    		
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Enviar">
+                                        
+                                               
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+        
                 </div>
     </body>
 </html>
