@@ -52,9 +52,10 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <link rel=\"icon\" href=\"/icon.ico\" type=\"images/icon.ico\" />\n");
+      out.write("       \n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>ACCESO A USUARIO</title>\n");
+      out.write("        \n");
       out.write("        ");
       out.write("<!-- bootstrap & fontawesome -->\n");
       out.write("\t\t<link rel=\"stylesheet\" href=\"assets/css/bootstrap.min.css\" />\n");
@@ -89,6 +90,8 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<script src=\"assets/js/html5shiv.min.js\"></script>\n");
       out.write("\t\t<script src=\"assets/js/respond.min.js\"></script>\n");
       out.write("\t\t<![endif]-->\n");
+      out.write("\n");
+      out.write("                    <link rel=\"icon\" type=\"image/ico\" href=\"./images/icon.ico\" />\n");
       out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
@@ -136,7 +139,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t    \t\t\t<input class=\"form-control\" placeholder=\"Contraseña\" name=\"f_clave\" type=\"password\" value=\"\">\n");
       out.write("\t\t\t    \t\t</div>\n");
       out.write("\t\t\t    \t\t\n");
-      out.write("\t\t\t    \t\t<input class=\"btn btn-lg btn-success btn-block\" type=\"submit\" value=\"Enviar\">\n");
+      out.write("                            <input class=\"btn btn-lg btn-success btn-block\" type=\"submit\" value=\"Enviar\">\n");
+      out.write("                                        \n");
+      out.write("                                               \n");
       out.write("\t\t\t    \t</fieldset>\n");
       out.write("\t\t\t      \t</form>\n");
       out.write("\t\t\t    </div>\n");

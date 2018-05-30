@@ -77,7 +77,7 @@ public class Librodao {
 
     public static boolean eliminar(Libro l) {
         try {
-            String SQL = "delate from libros where isbn=?";
+            String SQL = "delate from libros where isbn=?;";
 
             Connection con = Conexion.conectar();
             PreparedStatement st = con.prepareStatement(SQL);

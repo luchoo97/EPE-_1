@@ -307,8 +307,8 @@
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
+									<small>Bienvenido,</small>
+									Usuario :D
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -316,7 +316,7 @@
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								<li>
-									<a href="#">
+									<a href="">
 										<i class="ace-icon fa fa-cog"></i>
 										Settings
 									</a>
@@ -332,7 +332,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="login.jsp">
 										<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>

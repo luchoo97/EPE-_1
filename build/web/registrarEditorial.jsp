@@ -410,7 +410,7 @@
                             </li>
 
                             <li class="">
-                                <a href="registroLibro.jsp">
+                                <a href="regristroLibro.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Libro
                                 </a>

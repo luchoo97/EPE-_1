@@ -414,7 +414,7 @@
                             </li>
 
                             <li class="">
-                                <a href="registroLibro.jsp">
+                                <a href="regristroLibro.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Libro
                                 </a>
@@ -422,7 +422,7 @@
                                 <b class="arrow"></b>
                             </li>
                             <li class="">
-                                <a href="registroEditorial.jsp">
+                                <a href="registrarEditorial.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Editorial
                                 </a>
@@ -555,7 +555,7 @@
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <div class="table-header">
-                                            Registro de Libros
+                                            Registro de Libros:
                                         </div>
 
                                         <!-- div.table-responsive -->
@@ -642,15 +642,15 @@
                                                     </div>
                                                 </div>
 
-                                                <button name="accion" class="btn btn-success" type="submit" >
+                                                <button name="accion" value="registrar" class="btn btn-success" type="submit" >
                                                     <i class="fa fa-save"></i>
                                                     Registrar
                                                 </button>
-                                                <button name="accion" class="btn btn-warning" type="submit" >
+                                                <button name="accion" value="actualizar" class="btn btn-warning" type="submit" >
                                                     <i class="fa fa-edit"></i>
                                                     Actualizar
                                                 </button>
-                                                <button name="accion" class="btn btn-danger" type="submit" >
+                                                <button name="accion" value="eliminar" class="btn btn-danger" type="submit" >
                                                     <i class="fa fa-clock-o"></i>
                                                     Eliminar
                                                 </button>
