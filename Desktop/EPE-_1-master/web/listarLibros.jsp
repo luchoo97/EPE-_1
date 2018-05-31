@@ -308,7 +308,7 @@
 								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Bienvenido,</small>
-									Usuario :D
+									Usuario
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -1187,7 +1187,7 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							Héctor Navarro y Luis Sánchez &copy; 2017-2018
+							Héctor Navarro-Luis Sánchez &copy;2018
 						</span>
 
 						&nbsp; &nbsp;
