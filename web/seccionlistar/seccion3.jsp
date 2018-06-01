@@ -38,13 +38,7 @@
 							</div><!-- /.col -->
 						</div><!-- /.row -->
                                                 <div class="main-content">
-				<div class="main-content-inner">
-					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
-						<ul class="breadcrumb">
-							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Inicio</a>
-							</li>
+				
 
 							
 						</ul><!-- /.breadcrumb -->
@@ -129,10 +123,10 @@
 
 						<div class="page-header">
 							<h1>
-								Gestionar los libros
+								
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-                                                                Lista de libros
+                                                                Lista de Editorial
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -287,13 +281,7 @@
 					</div><!-- /.page-content -->
                                         
                                         <div class="main-content">
-				<div class="main-content-inner">
-					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
-						<ul class="breadcrumb">
-							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Inicio</a>
-							</li>
+				
 
 							
 						</ul><!-- /.breadcrumb -->
@@ -378,10 +366,10 @@
 
 						<div class="page-header">
 							<h1>
-								Gestionar los libros
+								
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-                                                                Lista de libros
+                                                                Lista de Categorias
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -482,11 +470,7 @@
 												</table>
 											</div>
 
-											<div class="modal-footer no-margin-top">
-												<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
-													<i class="ace-icon fa fa-times"></i>
-													Close
-												</button>
+											
 
 												<ul class="pagination pull-right no-margin">
 													<li class="prev disabled">

@@ -1,5 +1,11 @@
+
+
+
+
 <body>
+    
                 <div>
+                    <img src="../assets/images/avatars/logo.png" width="500" height="500" alt="."/>
                     <div class="container">
     <div class="row vertical-offset-100">
     	<div class="col-md-4 col-md-offset-4">

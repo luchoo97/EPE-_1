@@ -291,10 +291,10 @@
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="assets/images/avatars/logo.png" alt="IPChile" />
 								<span class="user-info">
-									<small>Bienvenido,</small>
-									Usuario :D
+									<small>Bienvendo</small>
+									IPChile
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -320,7 +320,7 @@
 								<li>
 									<a href="login.jsp">
 										<i class="ace-icon fa fa-power-off"></i>
-										Logout
+										Cerrar Sesión
 									</a>
 								</li>
 							</ul>
