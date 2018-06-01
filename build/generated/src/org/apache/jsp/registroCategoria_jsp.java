@@ -12,8 +12,11 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants = new java.util.ArrayList<String>(4);
     _jspx_dependants.add("/css.jsp");
+    _jspx_dependants.add("/seccioncategoria/seccion1.jsp");
+    _jspx_dependants.add("/seccioncategoria/seccion2.jsp");
+    _jspx_dependants.add("/seccioncategoria/seccion3.jsp");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -49,11 +52,6 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
       out.write("        ");
       out.write("<!-- bootstrap & fontawesome -->\n");
       out.write("\t\t<link rel=\"stylesheet\" href=\"assets/css/bootstrap.min.css\" />\n");
@@ -89,7 +87,16 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\t\t<script src=\"assets/js/respond.min.js\"></script>\n");
       out.write("\t\t<![endif]-->\n");
       out.write("\n");
-      out.write("    </head>\n");
+      out.write("                    <link rel=\"icon\" type=\"image/ico\" href=\"./images/icon.ico\" />\n");
+      out.write("\n");
+      out.write("        ");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title>Registro de Categoria</title>\n");
+      out.write("        \n");
+      out.write("        </head>\n");
       out.write("    <body>\n");
       out.write("    <body class=\"no-skin\">\n");
       out.write("        <div id=\"navbar\" class=\"navbar navbar-default          ace-save-state\">\n");
@@ -488,7 +495,7 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                            </li>\n");
       out.write("\n");
       out.write("                            <li class=\"\">\n");
-      out.write("                                <a href=\"registroLibro.jsp\">\n");
+      out.write("                                <a href=\"regristoLibro.jsp\">\n");
       out.write("                                    <i class=\"menu-icon fa fa-caret-right\"></i>\n");
       out.write("                                    Registrar Libro\n");
       out.write("                                </a>\n");
@@ -496,7 +503,7 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                                <b class=\"arrow\"></b>\n");
       out.write("                            </li>\n");
       out.write("                            <li class=\"\">\n");
-      out.write("                                <a href=\"registroEditorial.jsp\">\n");
+      out.write("                                <a href=\"registrarEditorial.jsp\">\n");
       out.write("                                    <i class=\"menu-icon fa fa-caret-right\"></i>\n");
       out.write("                                    Registrar Editorial\n");
       out.write("                                </a>\n");
@@ -609,9 +616,10 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                                    </div>\n");
       out.write("                                </div><!-- /.pull-left -->\n");
       out.write("                            </div><!-- /.ace-settings-box -->\n");
-      out.write("                        </div><!-- /.ace-settings-container -->\n");
+      out.write("                        </div><!-- /.ace-settings-container -->");
       out.write("\n");
-      out.write("                        <div class=\"page-header\">\n");
+      out.write("        ");
+      out.write(" <div class=\"page-header\">\n");
       out.write("                            <h1>\n");
       out.write("                                Gestionar los libros\n");
       out.write("                                <small>\n");
@@ -646,20 +654,21 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                                                    </div>\n");
       out.write("                                                </div>\n");
       out.write("                                                \n");
-      out.write("                                                 <form action=\"CategoriaControl\" method=\"post\" class=\"form-horizontal\">\n");
+      out.write("                                                 \n");
       out.write("                                                <div class=\"form-group\">\n");
       out.write("                                                    <label class=\"col-sm-3 control-label no-padding-right\">\n");
       out.write("                                                        Nombre:\n");
       out.write("                                                    </label>\n");
       out.write("                                                    <div class=\"col-sm-9\" >\n");
-      out.write("                                                         <input type=\"text\" name=\"Nombre\" value=\"\" placeholder=\"Nombre de la categoria\" />\n");
+      out.write("                                                         <input type=\"text\" name=\"nombre\" value=\"\" placeholder=\"Nombre de la categoria\" />\n");
       out.write("                                                    </div>\n");
       out.write("                                                </div>\n");
-      out.write("                                                      <form action=\"CategoriaControl\" method=\"post\" class=\"form-horizontal\">\n");
+      out.write("                                                     \n");
       out.write("                                                <div class=\"form-group\">\n");
       out.write("                                                    <label class=\"col-sm-3 control-label no-padding-right\">\n");
       out.write("                                                        Autor:\n");
       out.write("                                                    </label>\n");
+      out.write("                                                    \n");
       out.write("                                                    <div class=\"col-sm-9\" >\n");
       out.write("                                                         <input type=\"text\" name=\"autor\" value=\"\" placeholder=\"Autor de la categoria\" />\n");
       out.write("                                                    </div>\n");
@@ -691,11 +700,12 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("            </div>\n");
       out.write("        </div><!-- /.main-content -->\n");
       out.write("\n");
-      out.write("        <div class=\"footer\">\n");
+      out.write("        ");
+      out.write("<div class=\"footer\">\n");
       out.write("            <div class=\"footer-inner\">\n");
       out.write("                <div class=\"footer-content\">\n");
       out.write("                    <span class=\"bigger-120\">\n");
-      out.write("                        Christian Gámez &copy; 2017-2018\n");
+      out.write("                        Héctor Navarro - Luis Sánchez &copy; 2017-2018\n");
       out.write("                    </span>\n");
       out.write("\n");
       out.write("                    &nbsp; &nbsp;\n");
@@ -998,8 +1008,9 @@ public final class registroCategoria_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                    })\n");
       out.write("        </script>\n");
       out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("</html>");
       out.write("\n");
+      out.write("                \n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
