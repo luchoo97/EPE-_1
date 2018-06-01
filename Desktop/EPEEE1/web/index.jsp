@@ -4,6 +4,8 @@
     Author     : Luis
 --%>
 
-<%@include file="secciones/seccion1.jsp" %>
-<%@include file="secciones/seccion2.jsp" %>
-<%@include file="secciones/seccion3.jsp" %>
+
+
+<%@include file="seccionesIndex/seccion1.jsp" %>
+<%@include file="seccionesIndex/seccion2.jsp" %>
+<%@include file="seccionesIndex/seccion3.jsp" %>

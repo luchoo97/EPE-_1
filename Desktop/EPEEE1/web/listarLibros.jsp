@@ -1187,7 +1187,7 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							Héctor Navarro-Luis Sánchez &copy;2018
+							Héctor Navarro-Luis Sánchez &copy; 2018
 						</span>
 
 						&nbsp; &nbsp;
