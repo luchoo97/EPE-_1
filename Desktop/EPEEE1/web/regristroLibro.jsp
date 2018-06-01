@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro Libro</title>
         <%@include file="css.jsp" %>
     </head>
     <body>
@@ -414,7 +414,7 @@
                             </li>
 
                             <li class="">
-                                <a href="registroLibro.jsp">
+                                <a href="regristroLibro.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Libro
                                 </a>
@@ -422,7 +422,7 @@
                                 <b class="arrow"></b>
                             </li>
                             <li class="">
-                                <a href="registroEditorial.jsp">
+                                <a href="registrarEditorial.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Editorial
                                 </a>
@@ -555,106 +555,112 @@
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <div class="table-header">
-                                            Registro de Categorias
+                                            Registro de Libros:
                                         </div>
 
                                         <!-- div.table-responsive -->
 
                                         <!-- div.dataTables_borderWrap -->
                                         <div>
-                                            <form action="EditorialControl" method="post" class="form-horizontal">
+                                            <form action="LibroControl" method="post" class="form-horizontal">
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         ISBN:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                         <input type="text" name="isbn" value="" placeholder="Codigo de la categoria" />
+                                                        <input type="text" name="isbn" value="" placeholder="ISBN" />
                                                     </div>
                                                 </div>
-                                                
-                                                 <form action="EditorialControl" method="post" class="form-horizontal">
+
+
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Titulo:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                         <input type="text" name="titulo" value="" placeholder="Nombre de la categoria" />
+                                                        <input type="text" name="titulo" value="" placeholder="Titulo del Libro" />
                                                     </div>
                                                 </div>
-                                                      
-                                                           
-                                                                 
-                                                                        <form action="EditorialControl" method="post" class="form-horizontal">
+
+
+
+
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Autor:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                         <input type="text" name="nombreautor" value="" placeholder="Autor de la categoria" />
+                                                        <input type="text" name="autor" value="" placeholder="Autor" />
                                                     </div>
                                                 </div>
-                                                <form action="EditorialControl" method="post" class="form-horizontal">
+
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
-                                                        Publicacion:
+                                                       Fecha de Publicacion:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                         <input type="text" name="publicacion" value="" placeholder="Autor de la categoria" />
+                                                        <input type="text" name="publicacion" value="" placeholder="2018-30-05" />
                                                     </div>
                                                 </div>
-                                                    <form action="EditorialControl" method="post" class="form-horizontal">
+
+
+
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
-                                                        
-                                                        <form action="EditorialControl" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-sm-3 control-label no-padding-right">
-                                                         Categoria:
+                                                        Categoria:
                                                     </label>
                                                     <select name="categoria">
                                                         <option value="0">Seleccione una categoria</option>
-                                                        
-                                                            <%for(Categoria c:CategoriaDao.listar()) { %>
-                                                            <option value="<%=c.getCodigo() %>">"<%=c.getNombre()%>"</option>
+
+                                                        <%for (Categoria c : CategoriaDao.listar()) {%>
+                                                        <option value="<%=c.getCodigo()%>">"<%=c.getNombre()%>"</option>
                                                         <%} %>
                                                     </select>
                                                 </div>
-                                                        </form>
-                                                            
-                                                            <form action="EditorialControl" method="post" class="form-horizontal">
+
+
+
+
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Nit Editorial:
                                                     </label>
                                                     <div class="col-sm-9" >
-                                                         <select name="editorial">
-                                                        <option value="0">Seleccione una editorial</option>
-                                                        <%for(Editorial c:EditorialDao.listar()) { %>
-                                                        <option value="<%=c.getNit()%>">"<%=c.getNombre()%>"</option>
-                                                        <%} %>
-                                                    </select>
+                                                        <select name="editorial">
+                                                            <option value="0">Seleccione una editorial</option>
+                                                            <%for (Editorial c : EditorialDao.listar()) {%>
+                                                            <option value="<%=c.getNit()%>">"<%=c.getNombre()%>"</option>
+                                                            <%}%>
+                                                        </select>
                                                     </div>
                                                 </div>
-                                                          
-                                                          <button name="accion" class="btn btn-success" type="submit">
-                                                              <i class="fa fa-save"></i>
-                                                              Registrar
-                                                          </button>
-                                                                 <button name="accion" class="btn btn-warning" type="submit">
-                                                              <i class="fa fa-edit"></i>
-                                                              Actualizar
-                                                          </button>
-                                                                 <button name="accion" class="btn btn-danger" type="submit">
-                                                              <i class="fa fa-clock-o"></i>
-                                                              Eliminar
-                                                          </button>
-                                                          <div>
-                                                              <%=(request.getAttribute("mensaje")!= null?request.getAttribute("mensaje"):"")%>
-                                                          </div>
-                                                           
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right">
+                                                        Descripción:
+                                                    </label>
+                                                    <div class="col-sm-9" ><textarea name="descripcion" rows="4" cols="20"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <button name="accion" value="registrar" class="btn btn-success" type="submit" >
+                                                    <i class="fa fa-save"></i>
+                                                    Registrar
+                                                </button>
+                                                <button name="accion" value="actualizar" class="btn btn-warning" type="submit" >
+                                                    <i class="fa fa-edit"></i>
+                                                    Actualizar
+                                                </button>
+                                                <button name="accion" value="eliminar" class="btn btn-danger" type="submit" >
+                                                    <i class="fa fa-clock-o"></i>
+                                                    Eliminar
+                                                </button>
+                                                <div>
+                                                    <%=(request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "")%>
+                                                </div>
+
                                             </form>
                                         </div>
-                                        
+
 
 
                                     </div><!-- /.modal-content -->
@@ -672,7 +678,7 @@
             <div class="footer-inner">
                 <div class="footer-content">
                     <span class="bigger-120">
-                        Christian Gámez &copy; 2017-2018
+                        Héctor Navaro-Luis Sánchez &copy; 2018
                     </span>
 
                     &nbsp; &nbsp;
@@ -731,10 +737,10 @@
         <!-- inline scripts related to this page -->
         <script type="text/javascript">
                     jQuery(function ($) {
-                        //initiate dataTables plugin
+//initiate dataTables plugin
                         var myTable =
                                 $('#dynamic-table')
-                                //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+//.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
                                 .DataTable({
                                     bAutoWidth: false,
                                     "aoColumns": [
@@ -744,21 +750,21 @@
                                     ],
                                     "aaSorting": [],
 
-                                    //"bProcessing": true,
-                                    //"bServerSide": true,
-                                    //"sAjaxSource": "http://127.0.0.1/table.php"	,
+//"bProcessing": true,
+//"bServerSide": true,
+//"sAjaxSource": "http://127.0.0.1/table.php"	,
 
-                                    //,
-                                    //"sScrollY": "200px",
-                                    //"bPaginate": false,
+//,
+//"sScrollY": "200px",
+//"bPaginate": false,
 
-                                    //"sScrollX": "100%",
-                                    //"sScrollXInner": "120%",
-                                    //"bScrollCollapse": true,
-                                    //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
-                                    //you may want to wrap the table inside a "div.dataTables_borderWrap" element
+//"sScrollX": "100%",
+//"sScrollXInner": "120%",
+//"bScrollCollapse": true,
+//Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
+//you may want to wrap the table inside a "div.dataTables_borderWrap" element
 
-                                    //"iDisplayLength": 50
+//"iDisplayLength": 50
 
 
                                     select: {
@@ -809,7 +815,7 @@
                         });
                         myTable.buttons().container().appendTo($('.tableTools-container'));
 
-                        //style the message box
+//style the message box
                         var defaultCopyAction = myTable.button(1).action();
                         myTable.button(1).action(function (e, dt, button, config) {
                             defaultCopyAction(e, dt, button, config);
@@ -831,7 +837,7 @@
                             $('.dt-button-collection').appendTo('.tableTools-container .dt-buttons')
                         });
 
-                        ////
+////
 
                         setTimeout(function () {
                             $($('.tableTools-container')).find('a.dt-button').each(function () {
@@ -861,11 +867,11 @@
 
 
 
-                        /////////////////////////////////
-                        //table checkboxes
+/////////////////////////////////
+//table checkboxes
                         $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
 
-                        //select/deselect all rows according to table header checkbox
+//select/deselect all rows according to table header checkbox
                         $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function () {
                             var th_checked = this.checked;//checkbox inside "TH" table header
 
@@ -878,7 +884,7 @@
                             });
                         });
 
-                        //select/deselect a row when the checkbox is checked/unchecked
+//select/deselect a row when the checkbox is checked/unchecked
                         $('#dynamic-table').on('click', 'td input[type=checkbox]', function () {
                             var row = $(this).closest('tr').get(0);
                             if (this.checked)
@@ -897,8 +903,8 @@
 
 
 
-                        //And for the first simple table, which doesn't have TableTools or dataTables
-                        //select/deselect all rows according to table header checkbox
+//And for the first simple table, which doesn't have TableTools or dataTables
+//select/deselect all rows according to table header checkbox
                         var active_class = 'active';
                         $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function () {
                             var th_checked = this.checked;//checkbox inside "TH" table header
@@ -912,7 +918,7 @@
                             });
                         });
 
-                        //select/deselect a row when the checkbox is checked/unchecked
+//select/deselect a row when the checkbox is checked/unchecked
                         $('#simple-table').on('click', 'td input[type=checkbox]', function () {
                             var $row = $(this).closest('tr');
                             if ($row.is('.detail-row '))
@@ -926,10 +932,10 @@
 
 
                         /********************************/
-                        //add tooltip for small view action buttons in dropdown menu
+//add tooltip for small view action buttons in dropdown menu
                         $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
 
-                        //tooltip placement on right or left
+//tooltip placement on right or left
                         function tooltip_placement(context, source) {
                             var $source = $(source);
                             var $parent = $source.closest('table')
@@ -937,7 +943,7 @@
                             var w1 = $parent.width();
 
                             var off2 = $source.offset();
-                            //var w2 = $source.width();
+//var w2 = $source.width();
 
                             if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2))
                                 return 'right';

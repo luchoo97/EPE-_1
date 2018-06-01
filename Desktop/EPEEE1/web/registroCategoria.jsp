@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro Categoria</title>
         <%@include file="css.jsp" %>
     </head>
     <body>
@@ -410,7 +410,7 @@
                             </li>
 
                             <li class="">
-                                <a href="registroLibro.jsp">
+                                <a href="regristroLibro.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Libro
                                 </a>
@@ -418,7 +418,7 @@
                                 <b class="arrow"></b>
                             </li>
                             <li class="">
-                                <a href="registroEditorial.jsp">
+                                <a href="registrarEditorial.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Editorial
                                 </a>
@@ -568,7 +568,7 @@
                                                     </div>
                                                 </div>
                                                 
-                                                 <form action="CategoriaControl" method="post" class="form-horizontal">
+                                                 
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Nombre:
@@ -577,11 +577,12 @@
                                                          <input type="text" name="nombre" value="" placeholder="Nombre de la categoria" />
                                                     </div>
                                                 </div>
-                                                      <form action="CategoriaControl" method="post" class="form-horizontal">
+                                                     
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-right">
                                                         Autor:
                                                     </label>
+                                                    
                                                     <div class="col-sm-9" >
                                                          <input type="text" name="autor" value="" placeholder="Autor de la categoria" />
                                                     </div>
@@ -615,7 +616,7 @@
             <div class="footer-inner">
                 <div class="footer-content">
                     <span class="bigger-120">
-                        Christian Gámez &copy; 2017-2018
+                        Héctor Navarro-Luis Sánchez &copy; 2018
                     </span>
 
                     &nbsp; &nbsp;

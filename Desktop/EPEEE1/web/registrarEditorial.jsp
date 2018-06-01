@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro Editorial</title>
         <%@include file="css.jsp" %>
     </head>
     <body>
@@ -410,7 +410,7 @@
                             </li>
 
                             <li class="">
-                                <a href="registroLibro.jsp">
+                                <a href="regristroLibro.jsp">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Registrar Libro
                                 </a>
@@ -642,7 +642,7 @@
             <div class="footer-inner">
                 <div class="footer-content">
                     <span class="bigger-120">
-                        Christian Gámez &copy; 2017-2018
+                        Héctor Navarro-Luis Sánchez &copy; 2018
                     </span>
 
                     &nbsp; &nbsp;

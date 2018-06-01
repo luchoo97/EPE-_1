@@ -22,13 +22,13 @@ import modelo.Categoria;
 public class CategoriaDao {
     public static boolean regisrar(Categoria cat){
        try { 
-           String SQL="INSERT INTO categorias (nombre, autor)"+ "values (?,?);";
+           String SQL="INSERT INTO categorias (nombre, autor) values (?,?);";
         Connection con=Conexion.conectar();
         PreparedStatement st=con.prepareStatement(SQL);
         st.setString(1, cat.getNombre());
         st.setString(2, cat.getAutor());
        
-            st = con.prepareStatement(SQL);
+            
         if (st.executeUpdate()>0){
             return true;
         }else{
@@ -38,6 +38,24 @@ public class CategoriaDao {
             return false;
         }
        
+    }
+    
+     public static boolean eliminar(Categoria cat) {
+        try {
+            String SQL = "delate from categorias where codigo=?";
+
+            Connection con = Conexion.conectar();
+            PreparedStatement st = con.prepareStatement(SQL);
+            st.setInt(1, cat. getCodigo());
+
+            if (st.executeUpdate() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException ex) {
+            return false;
+        }
     }
      public static ArrayList<Categoria> listar(){
         try{
@@ -61,6 +79,23 @@ public class CategoriaDao {
         return lista;
         } catch (SQLException ex) {
             return null;
+        }
+       
+    }
+     public static String getCategoria(int cod){
+        try{
+         String SQL="select nombre from categorias where codigo=?";
+        Connection con=Conexion.conectar();
+        PreparedStatement st = con.prepareStatement(SQL); 
+            st.setInt(1, cod);
+           ResultSet resultado=st.executeQuery();
+        if(resultado.next()){
+            
+            return resultado.getString("nombre");                      
+        }
+        return "--";
+        } catch (SQLException ex) {
+            return "--";
         }
        
     }
